@@ -1,0 +1,38 @@
+@if (config === undefined) {
+  <div class="rounded-md bg-red-50 p-4 mb-8 w-auto mx-auto text-center">
+    <h3 class="text-base font-medium text-red-800">Config could not load!</h3>
+    <p class="text-sm text-red-800 mt-1">Please check your SDK initialization settings.</p>
+  </div>
+}
+<div class="mb-8 flex justify-center">
+  <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-700 ring-1 ring-gray-900/20">
+    @if (_isAuthenticated) {
+      <span
+        >You are logged in as <a [routerLink]="'profile'" class="underline">{{ user?.full_name }}</a
+        >!</span
+      >
+    } @else {
+      <span>You are not logged in!</span>
+    }
+  </div>
+</div>
+<div class="text-center">
+  <h1 class="text-balance text-4xl font-medium tracking-tight text-slate-950 sm:text-6xl">
+    Welcome to OLAF's sample for <span class="font-bold underline text-slate-950">Angular</span>
+  </h1>
+  <p class="mt-10 text-lg leading-7 text-gray-700">
+    This sample is ideal for developers looking to explore both the
+    <span class="font-bold underline text-slate-950">Angular</span> framework and the
+    <span class="font-bold underline text-slate-950">OLAF SDK</span> in a real-world scenario.
+  </p>
+  <div class="mt-20 flex items-center justify-center gap-x-6">
+    <a
+      href="#"
+      class="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+      >Button sample</a
+    >
+    <a href="#" class="text-sm font-semibold leading-6 text-slate-950 hover:text-slate-700"
+      >Link sample <span aria-hidden="true">→</span></a
+    >
+  </div>
+</div>
